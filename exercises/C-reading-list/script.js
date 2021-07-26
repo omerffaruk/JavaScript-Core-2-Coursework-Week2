@@ -9,17 +9,12 @@ function readingList(books) {
   // 2) create another div under h1 in #content and make it a flexbox, set the direction to row
   const nestedDiv = document.createElement("div");
   contentDiv.appendChild(nestedDiv);
-  nestedDiv.style.display = "flex";
-  nestedDiv.style.flexDirection = "row";
-  nestedDiv.style.justifyContent = "space-evenly";
-  nestedDiv.style.marginTop = 40;
+  nestedDiv.className = "bookContainer"; // see the style.css for the styling (.bookContainer)
   // 3) iterate over books array with forEach, create a div for each one
   books.forEach((book) => {
     const flexChildDiv = document.createElement("div");
     nestedDiv.appendChild(flexChildDiv);
-    flexChildDiv.style.paddingLeft = 15;
-    flexChildDiv.style.paddingRight = 50;
-    flexChildDiv.style.paddingBottom = 10;
+    flexChildDiv.className = "bookChild"; // see the style.css for the styling (.bookChild)
     // 4) in the loop, create a p element and append it to the nested div, set its content to the title - author property
     const titleAuthorP = document.createElement("p");
     flexChildDiv.appendChild(titleAuthorP);

@@ -152,6 +152,19 @@ body {
   background: #87ca8a;
 }
 
+.bookContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.bookChild {
+  padding-left: 15px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+}
+
 @media screen and (min-width: 992px) {
   .navbar-brand > img {
     max-height: 80px;
